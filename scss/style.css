@@ -1,0 +1,439 @@
+/* ========== RESET Y FUENTES ========== */  
+* {  
+    margin: 0;  
+    padding: 0;  
+    box-sizing: border-box;  
+}  
+
+body {  
+    font-family: "Outfit", serif;
+    padding-top: 90px; /* Espacio suficiente para el banner y el nav */  
+}  
+
+/* ========== TOP BANNER ========== */  
+.top-banner {  
+    background-color: #e2001a; /* Rojo */  
+    color: white; /* Letras blancas */  
+    text-align: center;  
+    padding: 10px 20px;  
+    font-size: 16px;    
+    position: fixed;  
+    top: 0;  
+    left: 0;  
+    width: 100%;  
+    z-index: 1100; /* Mayor que el top-nav */  
+}  
+
+.top-banner a.subscribe-link {  
+    color: white;  
+    text-decoration: underline;  
+    font-weight: bold;  
+    margin-left: 5px;  
+}  
+
+.top-banner a.subscribe-link:hover {  
+    text-decoration: none;  
+}  
+
+/* ========== TOP NAVIGATION ========== */  
+.top-nav {  
+    background-color: white; /* Fondo blanco */  
+    padding: 15px 0;  
+    border-bottom: 3px solid #e2001a; /* Línea roja debajo del menú */  
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);  
+    position: fixed;  
+    top: 40px; /* Ajustar debajo del top-banner */  
+    left: 0;  
+    width: 100%;  
+    z-index: 1000;  
+}  
+
+.top-nav .container {  
+    display: flex;  
+    justify-content: space-between;  
+    align-items: center;  
+    max-width: 1200px;  
+    margin: 0 auto;  
+    padding: 0 20px;  
+}  
+
+/* ========== LOGO ========== */  
+.logo {  
+        width: 95px; /* Ajusta el tamaño del logo */
+        height: auto;
+}  
+
+/* ========== MENÚ PRINCIPAL ========== */  
+.nav-links {  
+    display: flex;  
+    list-style: none;  
+}  
+
+.nav-links li {  
+    margin: 0 15px;  
+}  
+
+.nav-links a {  
+    text-decoration: none;  
+    color: #e2001a;  
+    font-weight: bold;  
+    transition: color 0.3s;  
+}  
+
+.nav-links a:hover {  
+    color: black;  
+}  
+
+/* ========== REDES SOCIALES ========== */  
+.social-icons {  
+    display: flex;  
+    gap: 15px;  
+}  
+
+.social-icons a {  
+    color: #e2001a;  
+    font-size: 18px;  
+    transition: color 0.3s;  
+}  
+
+.social-icons a:hover {  
+    color: black;  
+}  
+
+/* ========== SLIDER ESTILOS ========== */  
+
+/* Asegurar que el swiper ocupe toda la pantalla */  
+.swiper {  
+    width: 100%;  
+    height: 100vh; /* Altura completa de la ventana */  
+    position: relative; /* Permitir el posicionamiento de elementos hijos */  
+}  
+
+/* Ajustar estilos de los slides */  
+.swiper-slide {  
+    display: flex;  
+    justify-content: center;  
+    align-items: center;  
+    background-size: cover; /* Asegurar que la imagen cubra completamente */  
+    background-position: center; /* Centrar la imagen */  
+    color: white; /* Color de texto blanco para contraste */  
+    font-size: 48px; /* Tamaño de fuente más grande para el texto */  
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Sombra para legibilidad */  
+}  
+
+/* Imágenes de fondo para cada slide */  
+.swiper-slide:nth-child(1) {  
+    background-image: url('images/slider/1.webp'); /* Ajustar la ruta a la imagen */  
+}  
+
+.swiper-slide:nth-child(2) {  
+    background-image: url('images/slider/2.webp');  
+}  
+
+.swiper-slide:nth-child(3) {  
+    background-image: url('images/slider/3.webp');  
+}  
+
+/* Estilos para el siguiente y anterior botón en el slider */  
+.swiper-button-next,  
+.swiper-button-prev {  
+    color: white; /* Color de los botones en blanco */  
+    z-index: 10; /* Asegura que estén en el frente del slider */  
+}  
+
+/* Aumentar el tamaño de los botones */  
+.swiper-button-next::after,  
+.swiper-button-prev::after {  
+    font-size: 30px; /* Tamaño de fuente para los iconos de los botones */  
+}  
+
+/* Pagina de indicadores del swiper */  
+.swiper-pagination-bullet {  
+    background: #e2001a; /* Color de los indicadores */  
+}  
+
+.swiper-pagination-bullet-active {  
+    background: black; /* Color para el indicador activo */  
+}  
+
+/* ========== SCROLL ICON STYLES ========== */  
+.scroll-icon {  
+    display: flex;  
+    justify-content: center;  
+    margin: 20px 0;  
+    animation: bounce 2s infinite; /* Animate the bounce effect */  
+}  
+
+/* Keyframes for the bounce animation */  
+@keyframes bounce {  
+    0%, 20%, 50%, 80%, 100% {  
+        transform: translateY(0);  
+    }  
+    40% {  
+        transform: translateY(-15px);  
+    }  
+    60% {  
+        transform: translateY(-10px);  
+    }  
+}  
+
+/* ========== BLOG POSTS GRID STYLES ========== */  
+.blog-posts {  
+    display: grid;  
+    grid-template-columns: repeat(2, 1fr);  
+    gap: 20px;  
+    margin: 40px 0;  
+}  
+
+.post {  
+    background: #f4f4f4;  
+    border-radius: 8px;  
+    padding: 30px;  /* Increased padding for better spacing */  
+    text-align: center;  
+    position: relative;  
+    overflow: hidden;  
+}  
+.image-container {
+    position: relative;
+    width: 100%;
+    height: 300px; /* Ajusta según lo necesites */
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  
+  .post img {
+    width: 100%;
+    height: auto; /* Deja que la imagen mantenga su proporción */
+    object-fit: cover; /* Asegura que la imagen cubra sin deformarse */
+    border-radius: 8px;
+  }
+  
+  .icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 50px;  /* Tamaño fijo para el icono */
+    height: 50px; /* Tamaño fijo para el icono */
+    transform: translate(-50%, -50%);
+    fill: white;
+    pointer-events: none;
+    filter: invert(1);
+  }
+  
+    
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 0, 0, 0.4); /* Rojizo con menos opacidad */
+    border-radius: 8px;
+}
+
+.info {
+    background: #001c3a;
+    height: 23vh;
+    color: white;
+    text-align: center;
+    padding-top: 14vh; /* Ajusta la cantidad de espacio hacia abajo que deseas */
+}
+
+
+
+.grid-container {
+    display: grid;
+    gap: 15px;
+    grid-template-columns: repeat(7, 1fr); /* 7 columnas en la primera fila */
+    grid-template-rows: repeat(2, 100px); /* 2 filas con altura fija */
+    background: #e2001a;
+    padding: 80px 10px 50px 10px;
+    border-bottom: 1px white solid;
+    box-shadow: inset 0px 50px 20px rgba(255, 255, 255, 0.3); /* Sombra difusa hacia el interior */
+
+}
+
+.grid-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.1);
+    font-size: 18px;
+    font-weight: bold;
+    height: 100px;
+    border-radius: 8px;
+  }
+
+.grid-item img {
+    width: 75px; /* Ajusta el tamaño del logo */
+    height: auto;
+}
+
+/* Título centrado */
+.title {
+    grid-column: span 7;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    padding: 50px 10px;
+}
+
+/* Segunda fila: A y B ocupan dos columnas completas */
+.item-a {
+    grid-column: span 2;
+    width: 100%;
+}
+
+.item-b {
+    grid-column: span 2;
+    width: 100%;
+}
+
+
+
+
+.contact-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    background: white;
+    padding: 5% 15%;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+  }
+
+.contact-title {
+    color: #e2001a;
+    text-align: center;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-label {
+    font-weight: bold;
+    margin: 10px 0 5px;
+}
+
+.contact-input, .contact-textarea, .contact-button {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.contact-textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.contact-info {
+    font-size: 12px;
+    color: #555;
+    margin-top: 10px;
+}
+
+.contact-options {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: -42%;
+  }
+
+.contact-options-title {
+    margin-bottom: 10px;
+    color: #e2001a;
+}
+
+.contact-checkbox {
+    margin: 5px 0;
+}
+
+.contact-checkbox input {
+    margin-right: 10px;
+}
+
+.contact-submit-section {
+    margin-top: 20px;
+}
+
+.contact-submit-section input {
+    margin-right: 10px;
+}
+
+.contact-button {
+    background-color: #e2001a;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+.contact-button:hover {
+    background-color: #c00017;
+}
+
+
+.footer {
+    background-color: #001c3a;
+    color: white;
+    padding: 40px 20px;
+}
+
+.footer-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-column {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.footer-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.footer-link {
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+}
+
+.footer-link:hover {
+    text-decoration: underline;
+}
+
+/* ========== AJUSTES RESPONSIVOS ========== */  
+@media (max-width: 768px) {  
+    .top-nav .container {  
+        flex-direction: column;  
+        align-items: center;  
+        text-align: center;  
+    }  
+
+    .nav-links {  
+        margin-top: 10px;  
+        flex-direction: column;  
+        gap: 10px;  
+    }  
+
+    .social-icons {  
+        margin-top: 10px;  
+    }  
+
+    /* Make the blog grid single column on smaller screens */  
+    .blog-posts {  
+        grid-template-columns: 1fr; /* Change to 1 column layout */  
+    }  
+}
